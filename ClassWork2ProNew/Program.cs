@@ -61,8 +61,8 @@ namespace ClassWork2ProNew
 
         static void Main(string[] args)
         {//Ctrl + Shift + Space => call inteli sense
-
-
+            ///New  comment
+            //
         }
     }
 }
