@@ -59,10 +59,135 @@ namespace ClassWork2ProNew
             return (k, b);
         }
 
+        static bool IsSomethingValid(int n)
+        {
+            Console.WriteLine($"Value:{n}");
+            if(n > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        static void IfExample()
+        {
+            // >, <, >=, <=, ==, !=
+            // & - and
+            // | - or
+            int a = 0;
+            int b = 5;
+            if (a > 0 && IsSomethingValid(b))
+            {
+                Console.WriteLine("Both are greater than zero!");
+            }
+            else if (a == 0 || b == 0)
+            {
+                Console.WriteLine("One of them are zero");
+            }
+            else if (a < 0 && b < 0)
+            {
+                Console.WriteLine("Both are lower than zero");
+            }
+        }
+
+        static void SwitchExample()
+        {
+            Console.WriteLine("Enter 1 for task 1");
+            Console.WriteLine("Enter 2 for task 2");
+            Console.WriteLine("Enter 3 for task 3");
+            int choise = Convert.ToInt32(Console.ReadLine());
+            switch (choise)
+            {
+                case 1:
+                    Console.WriteLine(1);
+                    break;
+                case 2:
+                    Console.WriteLine(2);
+                    break;
+                case 3:
+                    Console.WriteLine(3);
+                    break;
+                default:
+                    Console.WriteLine("Default");
+                    break;
+            }
+        }
+
+        static void TimePartExample()
+        {
+            int minutes = 55;
+            if (minutes >= 0 && minutes <= 15)
+            {
+                Console.WriteLine(1);
+            }
+            else if (minutes > 15 && minutes <= 30)
+            {
+                Console.WriteLine(2);
+            }
+            else if (minutes > 30 && minutes <= 45)
+            {
+                Console.WriteLine(3);
+            }
+            else if (minutes > 45 && minutes <= 59)
+            {
+                Console.WriteLine(4);
+            }
+        }
+
+        static void TernarExample()
+        {
+            int year = 1945;
+            string message = year % 4 == 0 ? "Yes" : "No";
+        }
+
+        static bool IsTriangleExists(double a, double b, double c)
+        {
+            return
+                (a + b) > c &&
+                (a + c) > b &&
+                (c + b) > a;
+        }
+
+        static void IfAndTest()
+        {
+            int num = Convert.ToInt32(Console.ReadLine());
+            if (num % 2 == 0 && (num < 10 || num > 20))
+            {
+                Console.WriteLine(num * num);
+            }
+            else
+            {
+                Console.WriteLine(num);
+            }
+        }
+
+        static void Test()
+        {
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            if (a % b == 0 && a != 0 && b != 0)
+            {
+                Console.WriteLine("Yes");
+            }
+        }
+
+        static void CharExample()
+        {
+            char x = 'Z';
+            if ((x >= 'A' && x <= 'Z') || (x >= 'a' && x <= 'z'))
+            {
+                Console.WriteLine("Letter!");
+            }
+            else
+            {
+                Console.WriteLine("Something else!");
+            }
+        }
+
         static void Main(string[] args)
         {//Ctrl + Shift + Space => call inteli sense
-            ///New  comment
-            //
+
         }
     }
 }
